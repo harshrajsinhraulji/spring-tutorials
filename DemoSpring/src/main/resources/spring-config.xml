@@ -1,0 +1,18 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="dev" class="com.harshrajsinhraulji.Dev">
+<!--        <property name="age" value="20"/>      this is setter injection-->
+        <constructor-arg name="age" value="21"/>  <!-- this is constructor injection -->
+        <property name="laptop" ref="lap1"/>
+    </bean>
+
+    <bean id="lap1" class="com.harshrajsinhraulji.Laptop">
+
+    </bean>
+
+</beans>
